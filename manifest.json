@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Spotter de datas para visto americano",
+  "description": "Ajuda a encontrar boas datas para agendamento de entrevista para o visto americano",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://ais.usvisa-info.com/*",
+        "https://ais.usvisa-info.com/*/niv/schedule/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["scripts/*.js", "styles/*.css"],
+    "matches": ["<all_urls>"]
+  }],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
