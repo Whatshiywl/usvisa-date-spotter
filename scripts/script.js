@@ -2,7 +2,7 @@ const body = document.body;
 
 const scheduleRegex = /^https:\/\/ais.usvisa-info.com\/.*\/niv\/schedule\/(\d+).*$/;
 const appointmentPageRegex = /^https:\/\/ais.usvisa-info.com\/.*\/niv\/schedule\/\d+\/appointment$/;
-const appointmentJsonRegex = /^https:\/\/ais.usvisa-info.com\/.*\/niv\/schedule\/\d+\/appointment\/days\/\d\d\.json\?appointments\[expedite\]\=false$/;
+const appointmentJsonRegex = /^https:\/\/ais.usvisa-info.com\/.*\/niv\/schedule\/\d+\/appointment\/days\/\d+\.json\?appointments\[expedite\]\=false$/;
 
 function sleep(n) {
   return new Promise(r => setTimeout(r, n));
